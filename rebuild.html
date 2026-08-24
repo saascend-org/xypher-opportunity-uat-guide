@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=202608242151">
+<link rel="stylesheet" href="assets/site.css?v=202608242202">
 </head><body>
 <header class="top"><div class="wrap">
   <a href="index.html"><img src="assets/saascend-logo-white.png" alt="SaaScend"></a><nav class="main"><a href="index.html">Start here</a><a href="create.html">Create a deal</a><a href="stages.html">The six gates</a><a href="examples.html">Worked examples</a><a href="renewals.html">Renewals</a><a href="rebuild.html" aria-current="page">Zoho rebuild</a></nav>
@@ -70,13 +70,77 @@ total 100, and a half-remembered tender weighting will just block your save.</p>
 manager&rsquo;s name. And do not re-enter Closed Lost history unless we have asked &mdash; it needs a
 loss reason on creation and cannot be reopened afterwards.</p></div>
 
-<h2>How long to allow</h2>
-<div class="tablewrap"><table><thead><tr><th>Situation</th><th>Realistic time</th></tr></thead><tbody>
-<tr><td>A deal you know well, contacts already there</td><td>2&ndash;3 minutes</td></tr>
-<tr><td>A deal needing contacts created first</td><td>5&ndash;6 minutes</td></tr>
-<tr><td>A framework deal, lot number to look up</td><td>7&ndash;8 minutes</td></tr>
-<tr><td><b>Twenty deals</b></td><td><b>About an hour</b></td></tr>
+
+<h2 id="vocab">Zoho &rarr; Salesforce, in words</h2>
+<p>Most of it is the same idea under a different name. These are the ones worth knowing before you
+start typing.</p>
+<div class="tablewrap"><table><thead><tr><th>In Zoho</th><th>In Salesforce</th><th>Worth knowing</th></tr></thead><tbody>
+<tr><td>Deal</td><td><b>Opportunity</b></td><td>Older Zoho orgs call these <b>Potentials</b>. Same object either way.</td></tr>
+<tr><td>Deal Name</td><td><b>Opportunity Name</b></td><td></td></tr>
+<tr><td>Closing Date</td><td><b>Close Date</b></td><td></td></tr>
+<tr><td>Amount</td><td><b>Amount</b></td><td>Same name, same meaning.</td></tr>
+<tr><td>Stage</td><td><b>Stage</b> <span class="ui" style="background:var(--signal-soft);color:var(--signal)">confirm</span></td><td>Same field, <b>different values</b> — Xypher has six. Your Zoho stage names will not map one-to-one, so pick the Xypher stage that matches where the deal really is.</td></tr>
+<tr><td>Probability (%)</td><td><b>Probability (%)</b></td><td>In Salesforce this is set by the stage. You do not type it.</td></tr>
+<tr><td>Expected Revenue</td><td><b>Expected Revenue</b></td><td>Amount &times; Probability, calculated for you.</td></tr>
+<tr><td>Next Step</td><td><b>Next Step</b></td><td>Same field &mdash; but Salesforce also has <b>Next Step Date</b>, and a date in the past blocks every stage change. This is the biggest day-one difference.</td></tr>
+<tr><td>Contact Name (on the deal)</td><td><b>Contact Roles</b></td><td>The real conceptual change. Zoho puts one primary contact on a deal; Salesforce supports many, each with a role. At Xypher you set <b>Economic Buyer</b> and <b>Champion</b> and the roles are created for you.</td></tr>
+<tr><td>Account Name</td><td><b>Account</b></td><td></td></tr>
+<tr><td>Lead</td><td><b>Lead</b></td><td>Conversion works the same way: Lead becomes Account + Contact + Opportunity.</td></tr>
+<tr><td>Modules</td><td><b>Objects</b></td><td>Tabs across the top are the same idea.</td></tr>
+<tr><td>Custom Views</td><td><b>List Views</b></td><td>Your saved filters. Rebuild the ones you rely on.</td></tr>
+<tr><td>Blueprint</td><td><b>Sales Path + validation rules</b> <span class="ui" style="background:var(--signal-soft);color:var(--signal)">confirm</span></td><td>The closest analogue to the stage gates. If you used Blueprint in Zoho, the gates will feel familiar &mdash; they stop a deal moving until the stage's criteria are met.</td></tr>
+<tr><td>Workflow Rules</td><td><b>Flows</b></td><td>Automation. You will not build these; they run behind the scenes.</td></tr>
+<tr><td>Feeds</td><td><b>Chatter</b></td><td>Where the system talks to you. All automation guidance is posted here, not emailed.</td></tr>
+<tr><td>Notes</td><td><b>Notes</b></td><td></td></tr>
+<tr><td>Attachments</td><td><b>Files</b></td><td></td></tr>
+<tr><td>Tasks / Calls / Meetings</td><td><b>Tasks and Events</b></td><td>Together these are <b>Activities</b>. Several Xypher reports read from them, so logging matters.</td></tr>
+<tr><td>Products</td><td><b>Products</b></td><td>634 live in the catalogue.</td></tr>
+<tr><td>Price Books</td><td><b>Price Books</b></td><td>Two here: <b>Standard</b> and <b>Channel / Partner (GBP)</b>. Pick the right one before adding line items.</td></tr>
+<tr><td>Quotes</td><td><b>Quotes</b></td><td></td></tr>
+<tr><td>Reports / Dashboards</td><td><b>Reports / Dashboards</b></td><td>Same idea, different folders. See the map.</td></tr>
+<tr><td>Record Owner</td><td><b>Owner</b></td><td>At Xypher this now matters more than it did: revenue is attributed to the owner's business unit.</td></tr>
+<tr><td>Territory</td><td><b>Role hierarchy</b></td><td>Who can see whose deals.</td></tr>
+<tr><td>Zia</td><td><b>Einstein</b></td><td>Not in scope for this phase.</td></tr>
 </tbody></table></div>
+<div class="gate"><p class="glabel">Two rows marked &ldquo;confirm&rdquo;</p>
+<p>Those depend on how <em>your</em> Zoho was set up rather than on Salesforce, so we have not guessed
+them. <b>Stage names</b> will not map one-to-one &mdash; pick the Xypher stage matching where the deal
+really is. And if you used <b>Blueprint</b>, tell us: the stage gates are the same idea, and knowing you
+already think that way changes how we train it.</p></div>
+
+<h3>Things with no Zoho equivalent at all</h3>
+<p>These are new, and they are the ones that will slow you down at first:</p>
+<div class="tablewrap"><table><thead><tr><th>New concept</th><th>What it is</th></tr></thead><tbody>
+<tr><td><b>Business Unit</b></td><td>Which Xypher entity owns the deal &mdash; Intaforensics, DXR, CyberCrowd, Aristi or Xypher. Required to leave Qualify. No Zoho equivalent.</td></tr>
+<tr><td><b>Product / Service Line</b></td><td>What is being sold, at a service-line level. Required to leave Qualify.</td></tr>
+<tr><td><b>MEDDPICC grades</b></td><td>Seven graded fields recording how well qualified a deal is, and crucially <b>whether the buyer told you</b> or you inferred it. The gates check the grade, not just that the field is filled in.</td></tr>
+<tr><td><b>Next Step Date</b></td><td>A next step with no date is not a next step. A date in the past stops the deal moving at all.</td></tr>
+<tr><td><b>Bid Decision</b></td><td>An explicit bid / no-bid call, with a date and a name, before a deal can enter Proposal.</td></tr>
+<tr><td><b>Renewal Includes Expansion</b></td><td>One tick box that decides whether a renewal is waved through or fully re-qualified.</td></tr>
+</tbody></table></div>
+<div class="callout"><p class="clabel">The single biggest day-one difference</p>
+<p><b>Next Step Date.</b> In Zoho a next step was a note to yourself. Here it is enforced &mdash; a
+deal with no next step, or a next-step date in the past, <strong>cannot change stage at all</strong>.
+More re-entry attempts stall on this than on anything else.</p></div>
+
+<h2>How long to allow</h2>
+<div class="callout warn"><p class="clabel">Corrected &mdash; our first estimate was optimistic</p>
+<p>We originally said two to three minutes a deal, with five to six &ldquo;if contacts need
+creating&rdquo;. Checking the org changed that: there are <strong>15 contacts against 767
+accounts</strong>. Creating contacts is not the exception, it is <strong>almost every deal</strong>.
+Plan for the higher number.</p></div>
+<div class="tablewrap"><table><thead><tr><th>Situation</th><th>Realistic time</th><th>How often</th></tr></thead><tbody>
+<tr><td>Contacts already exist, deal you know well</td><td>2&ndash;3 minutes</td><td>Rare today</td></tr>
+<tr><td><b>Economic Buyer needs creating</b></td><td><b>5&ndash;6 minutes</b></td><td><b>The normal case</b></td></tr>
+<tr><td>Buyer and Champion both need creating</td><td>7&ndash;8 minutes</td><td>Common past Qualify</td></tr>
+<tr><td>Framework deal, lot number to look up</td><td>8&ndash;10 minutes</td><td>Public-sector deals</td></tr>
+<tr><td><b>Twenty deals</b></td><td><b>About two hours</b></td><td></td></tr>
+</tbody></table></div>
+<div class="gate pass"><p class="glabel">Which makes step two worth doing properly</p>
+<p>Because nearly every deal needs a contact, <strong>create your contacts in one batch first</strong>
+rather than stopping mid-deal each time. Work through your customer list, add the buyer and champion
+for each, and only then start on the opportunities. It is the difference between two hours and
+three.</p></div>
 <p>Do them in blocks rather than all at once. The qualification grades need thought, and quality
 degrades fast when this is done as a chore.</p>
 
@@ -96,5 +160,5 @@ worth more to us than a clean-looking pipeline.</p>
   Screenshots use <code>[DEMO]</code> records only &mdash; no real customer data. Prepared by SaaScend.
 </div></footer>
 <div id="lb" tabindex="-1" aria-hidden="true"><img alt=""></div>
-<script src="assets/site.js?v=202608242151"></script>
+<script src="assets/site.js?v=202608242202"></script>
 </body></html>
