@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB"><head>
+<html lang="en-GB" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Create a deal &middot; Xypher Deal Desk</title>
 <link rel="icon" href="assets/saascend-favicon.jpg">
@@ -9,23 +9,22 @@
 <link rel="stylesheet" href="assets/site.css">
 </head><body>
 <header class="top"><div class="wrap">
-  <img src="assets/saascend-logo-white.png" alt="SaaScend">
-  <nav class="main"><a href="index.html">Start here</a><a href="create.html" aria-current="page">Create a deal</a><a href="stages.html">The six gates</a><a href="renewals.html">Renewals</a><a href="rebuild.html">Zoho rebuild</a></nav>
+  <a href="index.html"><img src="assets/saascend-logo-white.png" alt="SaaScend"></a><nav class="main"><a href="index.html">Start here</a><a href="create.html" aria-current="page">Create a deal</a><a href="stages.html">The six gates</a><a href="examples.html">Worked examples</a><a href="renewals.html">Renewals</a><a href="rebuild.html">Zoho rebuild</a></nav>
 </div></header>
-<div class="hero"><div class="wrap">
-  <p class="eyebrow">Part one</p>
-  <h1>Creating a deal</h1>
-  <p class="standfirst">What Salesforce genuinely requires, why you should enter a deal at its real stage, and how contact roles look after themselves.</p>
-</div></div>
+<div class="hero"><div class="wrap"><p class="eyebrow">Part one</p><h1>Creating a deal</h1>
+<p class="standfirst">The click path, the four fields Salesforce genuinely requires, why you should enter a deal at its real stage &mdash; and how contact roles look after themselves.</p></div></div>
 <main><div class="wrap">
 
-<h2>What you actually need to save a new deal</h2>
+<h2>Creating a deal, click by click</h2>
+<ol class="clicks"><li><p>From the <span class="ui">Opportunities</span> tab, click <span class="ui">New</span>.</p></li><li><p>Type the <b>Opportunity Name</b> using <code>Customer - Service - Year</code>.</p></li><li><p>Pick the <b>Account</b>. Search on part of the name &mdash; not the full legal name.<span class="said">Most customers are already loaded. Check before you create a duplicate.</span></p></li><li><p>Set the <b>Close Date</b> to your genuine expected decision date.<span class="said">Not a comfortable one.</span></p></li><li><p>Set <b>Stage</b> to where the deal really is today.<span class="said">Not Qualify out of habit. See the section below — this is the important one.</span></p></li><li><p>Add <b>Amount</b>, <b>Type</b>, <b>Business Unit</b> and <b>Product / Service Line</b>.</p></li><li><p>Set a <b>Next Step</b> and a <b>Next Step Date</b> in the future.<span class="said">Do it now. Without it you cannot move the deal later.</span></p></li><li><p>Click <span class="ui">Save</span>.<span class="said">It will save with the qualification fields still empty.</span></p></li></ol>
+
+<h2>What you actually need to save</h2>
 <p>Very little. Salesforce itself only insists on four things:</p>
 <div class="tablewrap"><table><thead><tr><th>Field</th><th>What to put</th></tr></thead><tbody>
-<tr><td><b>Opportunity Name</b></td><td>A real convention &mdash; <code>Customer - Service - Year</code>. Consistency matters more than the exact format</td></tr>
-<tr><td><b>Close Date</b></td><td>Your genuine expected decision date. Not a comfortable one</td></tr>
-<tr><td><b>Stage</b></td><td>Where the deal really is today. See below &mdash; this is the important one</td></tr>
-<tr><td><b>Account</b></td><td>The customer. Create the Account first if it is not already there</td></tr>
+<tr><td><b>Opportunity Name</b></td><td><code>Customer - Service - Year</code></td></tr>
+<tr><td><b>Close Date</b></td><td>Your genuine expected decision date</td></tr>
+<tr><td><b>Stage</b></td><td>Where the deal really is today</td></tr>
+<tr><td><b>Account</b></td><td>The customer</td></tr>
 </tbody></table></div>
 <p>Everything else can wait. <strong>The gates fire when you move stages, not when you save.</strong></p>
 
@@ -37,29 +36,33 @@ They do not fire when a record is created. A deal created directly at <em>Propos
 does not have to satisfy the Qualify or Solution Validation exit criteria first.</p>
 <div class="callout"><p class="clabel">The point</p><p>You do not have to fake history. Put the deal in
 at its real stage, with what you actually know.</p></div>
-<p>Two exceptions, because they check the stage itself rather than a change to it:</p>
-<ul>
-<li><strong>Closed Won</strong> needs Contract/PO Number, Signed Date, Contract Start, Contract End and Win Reason &mdash; even on creation.</li>
-<li><strong>Closed Lost</strong> needs Loss Reason and Loss Detail &mdash; even on creation.</li>
-</ul>
+<div class="tablewrap"><table><thead><tr><th>Create it at</th><th>Gates on creation?</th><th>What happens next</th></tr></thead><tbody>
+<tr><td>Qualify</td><td>None</td><td>Qualify&rsquo;s exit criteria apply when you first move it</td></tr>
+<tr><td>Solution Validation</td><td>None</td><td>Solution Validation&rsquo;s exit criteria apply when you move it</td></tr>
+<tr><td>Proposal / Bid Submitted</td><td>None</td><td>Proposal&rsquo;s exit criteria apply when you move it</td></tr>
+<tr><td>Negotiation</td><td>None</td><td>Negotiation&rsquo;s exit criteria apply when you move it</td></tr>
+<tr><td><b>Closed Won</b></td><td><b>Yes</b></td><td>Needs contract fields and Win Reason immediately</td></tr>
+<tr><td><b>Closed Lost</b></td><td><b>Yes</b></td><td>Needs Loss Reason and Loss Detail immediately</td></tr>
+</tbody></table></div>
+<div class="callout verified"><p class="clabel">Proven, not assumed</p><p>Deals were created at all four
+open stages with only the basics filled in, as an ordinary sales user &mdash; all four saved. The two
+closed stages correctly refused. That test runs automatically so it cannot quietly stop being true.</p></div>
 
 <h2>The catch, so it does not surprise you</h2>
 <p>Creating at a late stage is free. <strong>Moving on from it is not.</strong> The exit gate for
-whatever stage you land on applies the moment you try to advance. A deal entered at Proposal will,
-when you next move it, need the full Proposal exit set &mdash; including all eight MEDDPICC elements.
-Enter it where it really is, and you will be asked for exactly the information you should already have.</p>
+whatever stage you land on applies the moment you try to advance. Enter the deal where it really is,
+and you will be asked for exactly the information you should already have.</p>
 
-<figure><img src="assets/screenshots/02-record-page-sections.png" alt="The record page. Fields are grouped into sections &mdash; Deal Classification, Qualification and MEDDPICC, Com" loading="lazy"><figcaption><b>The record page.</b> Fields are grouped into sections &mdash; Deal Classification, Qualification and MEDDPICC, Commercial &amp; Contract, and so on. The Sales Path across the top always shows the stage you are on and what it needs.</figcaption></figure>
-<h2>Contact roles &mdash; you do not maintain these by hand</h2>
-<p>Set the <b>Economic Buyer</b> and <b>Champion</b> lookup fields and the contact roles are created
-for you. Change either lookup and the existing role is <em>repointed</em> rather than duplicated, so
-you end up with one role, not two.</p>
-<figure><img src="assets/screenshots/03b-contact-roles.png" alt="Contact Roles, created automatically. Two roles here &mdash; an Economic Buyer and a Champion &mdash; both gen" loading="lazy"><figcaption><b>Contact Roles, created automatically.</b> Two roles here &mdash; an Economic Buyer and a Champion &mdash; both generated from the lookup fields on the deal. The panel on the right is the Sales Path guidance for Qualify, listing that stage&rsquo;s exit criteria.</figcaption></figure>
+<figure><img src="assets/screenshots/02-record-page-sections.png" alt="The record page. Fields are grouped into sections &amp;mdash; Deal Classification, Qualification and MEDDPICC, Commercial &amp;a" loading="lazy"><figcaption><b>The record page.</b> Fields are grouped into sections &mdash; Deal Classification, Qualification and MEDDPICC, Commercial &amp; Contract. The Sales Path across the top always shows the stage you are on and what it needs.</figcaption></figure>
+
+<h2>Contact roles look after themselves</h2>
+<p>Set the <b>Economic Buyer</b> and <b>Champion</b> lookups and the contact roles are created for you.
+Change either one and the existing role is <em>repointed</em>, not duplicated &mdash; so you end up
+with one role, not two.</p>
+<figure><img src="assets/screenshots/03b-contact-roles.png" alt="Contact Roles, created automatically. An Economic Buyer and a Champion, both generated from the lookup fields. On the ri" loading="lazy"><figcaption><b>Contact Roles, created automatically.</b> An Economic Buyer and a Champion, both generated from the lookup fields. On the right is the Sales Path guidance for Qualify, listing that stage&rsquo;s exit criteria.</figcaption></figure>
+<ol class="clicks"><li><p>Open a deal and find <b>Economic Buyer</b> in the qualification section.</p></li><li><p>Pick a contact and <span class="ui">Save</span>.</p></li><li><p>Open the <b>Contact Roles</b> panel on the left. The role is already there.</p></li><li><p>Now change <b>Economic Buyer</b> to someone else and save again.</p></li><li><p>Check Contact Roles again &mdash; still one Economic Buyer, now the new person.<span class="said">If you see two, tell us. That is the bug this was built to avoid.</span></p></li></ol>
 <p>Roles available if you add others by hand: Business User, Decision Maker, Economic Buyer, Champion,
 Economic Decision Maker, Evaluator, Executive Sponsor, Influencer, Technical Buyer, Other.</p>
-<div class="gate pass"><p class="glabel">Worth testing</p><p>Set an Economic Buyer, save, and check the
-Contact Roles list. Then change it to a different contact and confirm you still have exactly one
-Economic Buyer role, now pointing at the new person.</p></div>
 
 </div></main>
 <footer><div class="wrap">

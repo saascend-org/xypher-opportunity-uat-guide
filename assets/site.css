@@ -104,3 +104,106 @@ footer a{color:var(--muted)}
 #lb.open{display:flex}
 #lb img{max-width:100%;max-height:100%;border-radius:4px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ── widgets ─────────────────────────────────────────────────────────────── */
+
+/* grade ladder: the pass line is the whole point, so it gets a real rule */
+.ladder{background:var(--card);border:1px solid var(--rule);border-radius:4px;margin:0 0 16px;overflow:hidden}
+.ladder>summary{cursor:pointer;padding:13px 16px;font-family:var(--f-disp);font-weight:600;
+  font-size:1rem;display:flex;align-items:center;gap:10px;list-style:none}
+.ladder>summary::-webkit-details-marker{display:none}
+.ladder>summary::before{content:"▸";color:var(--accent);font-size:12px;flex:0 0 auto}
+.ladder[open]>summary::before{content:"▾"}
+.ladder>summary .fld{font-family:var(--f-mono);font-size:11px;color:var(--faint);margin-left:auto;
+  letter-spacing:.04em}
+.ladder .inner{padding:0 16px 15px}
+.rungs{list-style:none;margin:0 0 12px;padding:0;display:flex;flex-direction:column}
+.rungs li{display:flex;align-items:center;gap:11px;padding:7px 10px;font-size:14.5px;
+  border-left:3px solid var(--rule);color:var(--muted)}
+.rungs li .mk{font-family:var(--f-mono);font-size:10px;width:34px;flex:0 0 34px;text-align:center;
+  padding:2px 0;border-radius:2px;background:var(--mono-bg);color:var(--faint)}
+.rungs li.pass{color:var(--ink);border-left-color:var(--pass);background:var(--pass-soft)}
+.rungs li.pass .mk{background:var(--pass);color:var(--card)}
+.rungs li.fail .mk{background:transparent;border:1px solid var(--rule)}
+.passline{display:flex;align-items:center;gap:10px;margin:2px 0;font-family:var(--f-mono);
+  font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--pass)}
+.passline::before,.passline::after{content:"";height:1px;background:var(--pass);flex:1}
+.ladder .why{font-size:14.5px;color:var(--muted);margin:0;font-style:italic}
+
+/* gate checker */
+.checker{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:18px;margin:0 0 24px}
+.checker .ctop{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
+  margin-bottom:14px}
+.checker label.pick{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--faint);display:block;margin-bottom:5px}
+.checker select{font-family:var(--f-body);font-size:15px;padding:7px 10px;border:1px solid var(--rule);
+  border-radius:3px;background:var(--ground);color:var(--ink);min-width:250px}
+.checker select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.verdict{font-family:var(--f-disp);font-weight:600;font-size:1rem;padding:9px 14px;border-radius:3px;
+  background:var(--mono-bg);color:var(--muted)}
+.verdict.ok{background:var(--pass-soft);color:var(--pass)}
+.verdict.no{background:var(--signal-soft);color:var(--signal)}
+.reqs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.reqs li{padding:8px 4px;border-bottom:1px solid var(--rule-soft)}
+.reqs li:last-child{border-bottom:none}
+.reqs label{display:flex;gap:11px;align-items:flex-start;cursor:pointer;font-size:15px}
+.reqs input{margin:4px 0 0;flex:0 0 auto;accent-color:var(--accent);width:16px;height:16px}
+.reqs .hint{display:block;font-size:13.5px;color:var(--faint);margin-top:2px}
+.reqs li.done label{color:var(--muted)}
+.reqs li.done .txt{text-decoration:line-through;text-decoration-color:var(--faint)}
+.nojs{font-size:14px;color:var(--faint);margin:10px 0 0}
+
+/* click-path steps */
+.clicks{list-style:none;counter-reset:c;margin:0 0 22px;padding:0;display:flex;flex-direction:column;gap:0}
+.clicks li{counter-increment:c;display:grid;grid-template-columns:26px 1fr;gap:13px;
+  padding:10px 0;border-bottom:1px solid var(--rule-soft);align-items:start}
+.clicks li:last-child{border-bottom:none}
+.clicks li::before{content:counter(c);font-family:var(--f-mono);font-size:11px;color:var(--accent);
+  background:var(--accent-soft);border-radius:50%;width:22px;height:22px;display:grid;place-items:center;
+  margin-top:1px}
+.clicks li p{margin:0;font-size:15.5px}
+.clicks .ui{font-family:var(--f-disp);font-weight:600;background:var(--mono-bg);padding:1px 6px;
+  border-radius:3px;font-size:.94em;white-space:nowrap}
+.clicks .said{display:block;font-size:13.5px;color:var(--faint);margin-top:3px}
+
+/* worked examples: tabs that degrade to stacked sections without JS */
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin:0 0 -1px;position:relative;z-index:1}
+.tabs button{font-family:var(--f-disp);font-weight:600;font-size:14.5px;padding:9px 15px;
+  border:1px solid var(--rule);border-bottom-color:transparent;background:var(--ground);
+  color:var(--muted);border-radius:4px 4px 0 0;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--card);color:var(--ink)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.ex{background:var(--card);border:1px solid var(--rule);border-radius:0 4px 4px 4px;padding:20px}
+.ex + .ex{margin-top:16px}
+.ex h3{margin-top:0}
+.ex .kv{display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:1px 16px;font-size:15px;margin:0 0 16px}
+.ex .kv dt{font-family:var(--f-mono);font-size:12.5px;color:var(--faint);padding:6px 0;
+  border-bottom:1px solid var(--rule-soft)}
+.ex .kv dd{margin:0;padding:6px 0;border-bottom:1px solid var(--rule-soft)}
+.ex .kv dt:last-of-type,.ex .kv dd:last-of-type{border-bottom:none}
+.js-on .ex[hidden]{display:none}
+.no-js .tabs{display:none}
+
+/* renewal timeline */
+.timeline{margin:0 0 26px}
+.timeline svg{width:100%;height:auto;display:block}
+.tl-key{display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px;color:var(--muted);margin-top:8px}
+.tl-key span{display:flex;align-items:center;gap:6px}
+.tl-key i{width:11px;height:11px;border-radius:2px;display:block}
+
+/* progress-saving checklist */
+.deal-list{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:18px;margin:0 0 22px}
+.deal-list .dtop{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+  margin-bottom:12px}
+.deal-list h3{margin:0;font-size:1.06rem}
+.bar{height:6px;background:var(--mono-bg);border-radius:3px;overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .25s}
+.btn{font-family:var(--f-disp);font-weight:600;font-size:13.5px;padding:7px 13px;border:1px solid var(--rule);
+  background:var(--ground);color:var(--muted);border-radius:3px;cursor:pointer}
+.btn:hover{color:var(--ink);border-color:var(--accent)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.copy{font-family:var(--f-mono);font-size:13px;display:inline-flex;align-items:center;gap:8px;
+  background:var(--mono-bg);border:1px solid var(--rule);border-radius:3px;padding:5px 6px 5px 10px}
+.copy button{font-family:var(--f-disp);font-size:11.5px;font-weight:600;border:none;border-radius:2px;
+  background:var(--accent);color:#fff;padding:4px 9px;cursor:pointer}
+.copy button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}

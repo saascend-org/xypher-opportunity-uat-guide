@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB"><head>
+<html lang="en-GB" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The six gates &middot; Xypher Deal Desk</title>
 <link rel="icon" href="assets/saascend-favicon.jpg">
@@ -9,99 +9,95 @@
 <link rel="stylesheet" href="assets/site.css">
 </head><body>
 <header class="top"><div class="wrap">
-  <img src="assets/saascend-logo-white.png" alt="SaaScend">
-  <nav class="main"><a href="index.html">Start here</a><a href="create.html">Create a deal</a><a href="stages.html" aria-current="page">The six gates</a><a href="renewals.html">Renewals</a><a href="rebuild.html">Zoho rebuild</a></nav>
+  <a href="index.html"><img src="assets/saascend-logo-white.png" alt="SaaScend"></a><nav class="main"><a href="index.html">Start here</a><a href="create.html">Create a deal</a><a href="stages.html" aria-current="page">The six gates</a><a href="examples.html">Worked examples</a><a href="renewals.html">Renewals</a><a href="rebuild.html">Zoho rebuild</a></nav>
 </div></header>
-<div class="hero"><div class="wrap">
-  <p class="eyebrow">Part two</p>
-  <h1>The six stages</h1>
-  <p class="standfirst">Exactly what each stage demands before it lets you move on &mdash; including the grade thresholds, which are where most people get stuck.</p>
-</div></div>
+<div class="hero"><div class="wrap"><p class="eyebrow">Part two</p><h1>The six stages</h1>
+<p class="standfirst">Pick your stage, tick what you have, and see what is stopping the deal. Plus the grade ladders &mdash; where nearly every blocked deal is actually stuck.</p></div></div>
 <main><div class="wrap">
 
-<p>Six stages: <strong>Qualify &rarr; Solution Validation &rarr; Proposal / Bid Submitted &rarr;
-Negotiation / Commercial Agreement &rarr; Closed Won</strong>, or <strong>Closed Lost</strong> from
-anywhere. The Sales Path shows the required fields for whichever stage you are on and repeats the exit
-criteria &mdash; use it, it is faster than this page.</p>
-
-<figure><img src="assets/screenshots/01-sales-path-qualify.png" alt="The Sales Path and its guidance. The chevrons are the six stages. &ldquo;Guidance for Success&rdquo; on the ri" loading="lazy"><figcaption><b>The Sales Path and its guidance.</b> The chevrons are the six stages. &ldquo;Guidance for Success&rdquo; on the right lists exactly what this stage needs before it will let you move on.</figcaption></figure>
-
-<div class="gate"><p class="glabel">Applies to every single stage move</p>
-<p><strong>Every stage change needs a Next Step and a Next Step Date of today or later.</strong> If
-your next-step date has slipped into the past you cannot advance the deal at all until you update it.
-This catches people more than any other rule, and it is deliberate: a deal with no credible next step
-is not really moving. It does not apply when you move to Closed Won or Closed Lost.</p></div>
+<h2>Can my deal move?</h2>
+<p>Pick the stage your deal is on and tick what you already have. Anything left unticked is what is
+stopping you.</p>
+<div class="checker" id="checker"><div class="ctop"><div><label class="pick" for="ck-stage">My deal is currently at</label><select id="ck-stage"><option value="Qualify">Qualify</option><option value="Solution Validation">Solution Validation</option><option value="Proposal / Bid Submitted">Proposal / Bid Submitted</option><option value="Negotiation / Commercial Agreement">Negotiation / Commercial Agreement</option><option value="Closed Won">Closed Won</option><option value="Closed Lost">Closed Lost</option></select></div><p class="verdict" role="status" aria-live="polite"></p><button class="btn reset" type="button">Clear ticks</button></div><div class="reqs"><ul class="reqs" data-stage="Qualify"><li><label for="ck-qualify-0"><input type="checkbox" id="ck-qualify-0"><span><span class="txt">Business Unit set</span><span class="hint">Which Xypher entity owns the deal</span></span></label></li><li><label for="ck-qualify-1"><input type="checkbox" id="ck-qualify-1"><span><span class="txt">Product / Service Line set</span></span></label></li><li><label for="ck-qualify-2"><input type="checkbox" id="ck-qualify-2"><span><span class="txt">Type set</span><span class="hint">New Business, Cross-Sell, Expansion or Renewal</span></span></label></li><li><label for="ck-qualify-3"><input type="checkbox" id="ck-qualify-3"><span><span class="txt">Economic Buyer named</span></span></label></li><li><label for="ck-qualify-4"><input type="checkbox" id="ck-qualify-4"><span><span class="txt">Economic Buyer graded Engaged - Met or Spoken or better</span><span class="hint">Identified by Name &amp; Role fails</span></span></label></li><li><label for="ck-qualify-5"><input type="checkbox" id="ck-qualify-5"><span><span class="txt">Pain / Use Case written</span></span></label></li><li><label for="ck-qualify-6"><input type="checkbox" id="ck-qualify-6"><span><span class="txt">Pain graded Buyer-Articulated in Own Words or better</span></span></label></li><li><label for="ck-qualify-7"><input type="checkbox" id="ck-qualify-7"><span><span class="txt">Success Metric written</span></span></label></li><li><label for="ck-qualify-8"><input type="checkbox" id="ck-qualify-8"><span><span class="txt">Metrics graded Buyer-Stated Impact or better</span></span></label></li><li><label for="ck-qualify-9"><input type="checkbox" id="ck-qualify-9"><span><span class="txt">Funding Route set, and not No Budget Identified</span></span></label></li><li><label for="ck-qualify-10"><input type="checkbox" id="ck-qualify-10"><span><span class="txt">Next Step filled in</span></span></label></li><li><label for="ck-qualify-11"><input type="checkbox" id="ck-qualify-11"><span><span class="txt">Next Step Date today or later</span><span class="hint">The rule that catches most people</span></span></label></li></ul><ul class="reqs" data-stage="Solution Validation"><li><label for="ck-solutionvalidation-0"><input type="checkbox" id="ck-solutionvalidation-0"><span><span class="txt">Procurement Route set</span><span class="hint">Direct Award, Framework Call-off, Open Tender, Mini-Competition</span></span></label></li><li><label for="ck-solutionvalidation-1"><input type="checkbox" id="ck-solutionvalidation-1"><span><span class="txt">Framework Name set (only if a call-off or mini-competition)</span><span class="hint">Mandatory on every save, not just stage change</span></span></label></li><li><label for="ck-solutionvalidation-2"><input type="checkbox" id="ck-solutionvalidation-2"><span><span class="txt">Champion named</span></span></label></li><li><label for="ck-solutionvalidation-3"><input type="checkbox" id="ck-solutionvalidation-3"><span><span class="txt">Champion Confirmed Date set</span></span></label></li><li><label for="ck-solutionvalidation-4"><input type="checkbox" id="ck-solutionvalidation-4"><span><span class="txt">Champion graded Confirmed Advocacy or better</span></span></label></li><li><label for="ck-solutionvalidation-5"><input type="checkbox" id="ck-solutionvalidation-5"><span><span class="txt">Decision Criteria written and graded</span><span class="hint">Buyer-Stated, Informal or better</span></span></label></li><li><label for="ck-solutionvalidation-6"><input type="checkbox" id="ck-solutionvalidation-6"><span><span class="txt">Decision Process written and graded</span><span class="hint">Steps &amp; Timeline Buyer-Confirmed or better</span></span></label></li><li><label for="ck-solutionvalidation-7"><input type="checkbox" id="ck-solutionvalidation-7"><span><span class="txt">Competition graded Buyer-Confirmed Competitive Set or better</span><span class="hint">Competitors Identified passes on a tender</span></span></label></li><li><label for="ck-solutionvalidation-8"><input type="checkbox" id="ck-solutionvalidation-8"><span><span class="txt">Next Step filled in</span></span></label></li><li><label for="ck-solutionvalidation-9"><input type="checkbox" id="ck-solutionvalidation-9"><span><span class="txt">Next Step Date today or later</span><span class="hint">The rule that catches most people</span></span></label></li></ul><ul class="reqs" data-stage="Proposal / Bid Submitted"><li><label for="ck-proposalbidsubmitted-0"><input type="checkbox" id="ck-proposalbidsubmitted-0"><span><span class="txt">Bid Decision is Bid or Bid - Conditional</span><span class="hint">Needed to ENTER this stage, not leave it</span></span></label></li><li><label for="ck-proposalbidsubmitted-1"><input type="checkbox" id="ck-proposalbidsubmitted-1"><span><span class="txt">Bid Decision Date set</span></span></label></li><li><label for="ck-proposalbidsubmitted-2"><input type="checkbox" id="ck-proposalbidsubmitted-2"><span><span class="txt">Bid Decision By set</span></span></label></li><li><label for="ck-proposalbidsubmitted-3"><input type="checkbox" id="ck-proposalbidsubmitted-3"><span><span class="txt">Proposal / Bid Reference set</span></span></label></li><li><label for="ck-proposalbidsubmitted-4"><input type="checkbox" id="ck-proposalbidsubmitted-4"><span><span class="txt">Submission Date set</span><span class="hint">When you submitted, not the portal deadline</span></span></label></li><li><label for="ck-proposalbidsubmitted-5"><input type="checkbox" id="ck-proposalbidsubmitted-5"><span><span class="txt">Buyer Receipt Confirmed ticked</span><span class="hint">And confirmed in writing</span></span></label></li><li><label for="ck-proposalbidsubmitted-6"><input type="checkbox" id="ck-proposalbidsubmitted-6"><span><span class="txt">Evaluation Date set</span></span></label></li><li><label for="ck-proposalbidsubmitted-7"><input type="checkbox" id="ck-proposalbidsubmitted-7"><span><span class="txt">MEDDPICC Complete ticked</span><span class="hint">All eight elements at grade — includes Paper Process</span></span></label></li><li><label for="ck-proposalbidsubmitted-8"><input type="checkbox" id="ck-proposalbidsubmitted-8"><span><span class="txt">Next Step filled in</span></span></label></li><li><label for="ck-proposalbidsubmitted-9"><input type="checkbox" id="ck-proposalbidsubmitted-9"><span><span class="txt">Next Step Date today or later</span><span class="hint">The rule that catches most people</span></span></label></li></ul><ul class="reqs" data-stage="Negotiation / Commercial Agreement"><li><label for="ck-negotiationcommercialagreement-0"><input type="checkbox" id="ck-negotiationcommercialagreement-0"><span><span class="txt">Verbal Commit Date set</span></span></label></li><li><label for="ck-negotiationcommercialagreement-1"><input type="checkbox" id="ck-negotiationcommercialagreement-1"><span><span class="txt">Verbal Commit Evidence written</span><span class="hint">Written or minuted intent to award</span></span></label></li><li><label for="ck-negotiationcommercialagreement-2"><input type="checkbox" id="ck-negotiationcommercialagreement-2"><span><span class="txt">Paper Process Status past Not Started</span></span></label></li><li><label for="ck-negotiationcommercialagreement-3"><input type="checkbox" id="ck-negotiationcommercialagreement-3"><span><span class="txt">Legal Review Status past Not Started</span><span class="hint">Not Required is a legitimate answer</span></span></label></li></ul><ul class="reqs" data-stage="Closed Won"><li><label for="ck-closedwon-0"><input type="checkbox" id="ck-closedwon-0"><span><span class="txt">Contract / PO Number set</span></span></label></li><li><label for="ck-closedwon-1"><input type="checkbox" id="ck-closedwon-1"><span><span class="txt">Signed Date set</span></span></label></li><li><label for="ck-closedwon-2"><input type="checkbox" id="ck-closedwon-2"><span><span class="txt">Contract Start Date set</span></span></label></li><li><label for="ck-closedwon-3"><input type="checkbox" id="ck-closedwon-3"><span><span class="txt">Contract End Date set</span><span class="hint">This drives the automatic renewal — get it right</span></span></label></li><li><label for="ck-closedwon-4"><input type="checkbox" id="ck-closedwon-4"><span><span class="txt">Win Reason set</span></span></label></li><li><label for="ck-closedwon-5"><input type="checkbox" id="ck-closedwon-5"><span><span class="txt">Products added to the deal</span><span class="hint">Not enforced, but a won deal with no products becomes a finance exception</span></span></label></li></ul><ul class="reqs" data-stage="Closed Lost"><li><label for="ck-closedlost-0"><input type="checkbox" id="ck-closedlost-0"><span><span class="txt">Loss Reason set</span></span></label></li><li><label for="ck-closedlost-1"><input type="checkbox" id="ck-closedlost-1"><span><span class="txt">Loss Detail written</span><span class="hint">The only input a future win/loss review has</span></span></label></li><li><label for="ck-closedlost-2"><input type="checkbox" id="ck-closedlost-2"><span><span class="txt">Competitor Won set (if lost to a competitor)</span></span></label></li><li><label for="ck-closedlost-3"><input type="checkbox" id="ck-closedlost-3"><span><span class="txt">Winning Supplier - Other (if the competitor is 'Other')</span></span></label></li></ul></div><p class="nojs">Tick what you already have. Every stage is listed below if scripting is off &mdash; nothing here is hidden from you.</p></div>
 
 <h2>What it looks like when a gate stops you</h2>
-<figure><img src="assets/screenshots/03-stage-gate-blocks.png" alt="A gate firing, for real. This deal was moved from Qualify to Solution Validation with the qualification fields" loading="lazy"><figcaption><b>A gate firing, for real.</b> This deal was moved from Qualify to Solution Validation with the qualification fields empty. Two rules fired at once: the stage gate listing every missing field, and the next-step rule flagging a date that had already passed. Captured as an ordinary sales user &mdash; an administrator would have sailed straight through, which is why we did not use one.</figcaption></figure>
+<figure><img src="assets/screenshots/03-stage-gate-blocks.png" alt="A gate firing, for real. This deal was moved from Qualify to Solution Validation with the qualification fields empty. Tw" loading="lazy"><figcaption><b>A gate firing, for real.</b> This deal was moved from Qualify to Solution Validation with the qualification fields empty. Two rules fired at once &mdash; the stage gate listing every missing field, and the next-step rule flagging a date that had already passed. Captured as an ordinary sales user; an administrator would have sailed straight through, which is why we did not use one.</figcaption></figure>
+<div class="gate"><p class="glabel">How to read that error</p>
+<p>Salesforce shows &ldquo;We hit a snag&rdquo; and then two separate things: the <strong>message from
+the rule</strong>, which names every field the stage needs, and <strong>Review the following
+fields</strong>, which lists individual fields highlighted in red on the form. Fix the red ones first
+&mdash; they are usually the quick wins.</p></div>
 
-<h2>1 &middot; Leaving Qualify</h2>
+<h2>Moving a deal, click by click</h2>
+<ol class="clicks"><li><p>Open the deal and look at the <b>Sales Path</b> across the top. The dark chevron is where you are.</p></li><li><p>Read <b>Guidance for Success</b> on the right of the Path. It lists this stage&rsquo;s exit criteria.<span class="said">Faster than any document, and it is generated from the same rules.</span></p></li><li><p>Fill the <b>Key Fields</b> shown beside it. These are the ones this stage cares about.</p></li><li><p>Set a <b>Next Step</b> and a <b>Next Step Date</b> of today or later.<span class="said">Miss this and nothing else you did will let the deal move.</span></p></li><li><p>Click <span class="ui">Mark Stage as Complete</span> on the Path, or edit <b>Stage</b> directly and <span class="ui">Save</span>.</p></li><li><p>If it refuses, read the message, fix what it names, and save again.<span class="said">The message is written to tell you what to do, not just that something is wrong.</span></p></li></ol>
+
+<h2>The grade ladders</h2>
+<p>Most fields are simply filled in or not. The MEDDPICC grades are different: they are a ladder, and
+each gate has a line partway up it. <strong>Nearly every blocked deal is blocked here.</strong> Open
+one to see exactly where its line sits.</p>
+<h3>Needed to leave Qualify</h3>
+<details class="ladder"><summary>MEDDPICC — Economic Buyer (E)<span class="fld">MEDDPICC_Economic_Buyer__c</span></summary><div class="inner"><ul class="rungs"><li class="fail"><span class="mk">&times;</span><span>Unknown</span></li><li class="fail"><span class="mk">&times;</span><span>Not Identified</span></li><li class="fail"><span class="mk">&times;</span><span>Assumed / Inferred</span></li><li class="fail"><span class="mk">&times;</span><span>Identified by Name &amp; Role</span></li></ul><p class="passline">passes from here</p><ul class="rungs"><li class="pass"><span class="mk">&check;</span><span>Engaged - Met or Spoken</span></li><li class="pass"><span class="mk">&check;</span><span>Funding Authority Confirmed</span></li></ul><p class="why">Knowing who they are is not the bar. You have to have spoken to them.</p></div></details><details class="ladder"><summary>MEDDPICC — Identify Pain (I)<span class="fld">MEDDPICC_Pain__c</span></summary><div class="inner"><ul class="rungs"><li class="fail"><span class="mk">&times;</span><span>Unknown</span></li><li class="fail"><span class="mk">&times;</span><span>Not Discussed</span></li><li class="fail"><span class="mk">&times;</span><span>Rep-Observed Pain</span></li><li class="fail"><span class="mk">&times;</span><span>Buyer-Acknowledged Pain</span></li></ul><p class="passline">passes from here</p><ul class="rungs"><li class="pass"><span class="mk">&check;</span><span>Buyer-Articulated in Own Words</span></li><li class="pass"><span class="mk">&check;</span><span>Pain Tied to Business Consequence</span></li></ul><p class="why">They have to say it themselves. Them nodding along to your version does not count.</p></div></details><details class="ladder"><summary>MEDDPICC — Metrics (M)<span class="fld">MEDDPICC_Metrics__c</span></summary><div class="inner"><ul class="rungs"><li class="fail"><span class="mk">&times;</span><span>Unknown</span></li><li class="fail"><span class="mk">&times;</span><span>Not Discussed</span></li><li class="fail"><span class="mk">&times;</span><span>Pain Acknowledged, Not Quantified</span></li><li class="fail"><span class="mk">&times;</span><span>Rep-Estimated Impact</span></li></ul><p class="passline">passes from here</p><ul class="rungs"><li class="pass"><span class="mk">&check;</span><span>Buyer-Stated Impact</span></li><li class="pass"><span class="mk">&check;</span><span>Buyer-Quantified &amp; Documented</span></li></ul><p class="why">Your estimate of their saving is not a metric. Theirs is.</p></div></details>
+<h3>Needed to leave Solution Validation</h3>
+<details class="ladder"><summary>MEDDPICC — Champion (C)<span class="fld">MEDDPICC_Champion__c</span></summary><div class="inner"><ul class="rungs"><li class="fail"><span class="mk">&times;</span><span>Unknown</span></li><li class="fail"><span class="mk">&times;</span><span>None Identified</span></li><li class="fail"><span class="mk">&times;</span><span>Supporter Identified</span></li><li class="fail"><span class="mk">&times;</span><span>Champion Identified</span></li></ul><p class="passline">passes from here</p><ul class="rungs"><li class="pass"><span class="mk">&check;</span><span>Champion Confirmed Advocacy</span></li><li class="pass"><span class="mk">&check;</span><span>Champion Selling Internally</span></li><li class="pass"><span class="mk">&check;</span><span>Champion Tested - Has Fought For Us</span></li></ul><p class="why">A supporter likes you. A champion argues for you when you are not in the room.</p></div></details><details class="ladder"><summary>MEDDPICC — Decision Criteria (D)<span class="fld">MEDDPICC_Decision_Criteria__c</span></summary><div class="inner"><ul class="rungs"><li class="fail"><span class="mk">&times;</span><span>Unknown</span></li><li class="fail"><span class="mk">&times;</span><span>Not Discussed</span></li><li class="fail"><span class="mk">&times;</span><span>Assumed by Rep</span></li></ul><p class="passline">passes from here</p><ul class="rungs"><li class="pass"><span class="mk">&check;</span><span>Buyer-Stated, Informal</span></li><li class="pass"><span class="mk">&check;</span><span>Buyer-Confirmed, Documented</span></li><li class="pass"><span class="mk">&check;</span><span>Criteria Influenced by Xypher</span></li></ul><p class="why">Informal is enough here — but it has to have come from them.</p></div></details><details class="ladder"><summary>MEDDPICC — Decision Process (D)<span class="fld">MEDDPICC_Decision_Process__c</span></summary><div class="inner"><ul class="rungs"><li class="fail"><span class="mk">&times;</span><span>Unknown</span></li><li class="fail"><span class="mk">&times;</span><span>Not Discussed</span></li><li class="fail"><span class="mk">&times;</span><span>Assumed by Rep</span></li><li class="fail"><span class="mk">&times;</span><span>Steps Known, Timeline Unclear</span></li></ul><p class="passline">passes from here</p><ul class="rungs"><li class="pass"><span class="mk">&check;</span><span>Steps &amp; Timeline Buyer-Confirmed</span></li><li class="pass"><span class="mk">&check;</span><span>Governance / Committee Route Confirmed</span></li></ul><p class="why">Knowing the steps is not enough without the timeline.</p></div></details><details class="ladder"><summary>MEDDPICC — Competition (C)<span class="fld">MEDDPICC_Competition__c</span></summary><div class="inner"><ul class="rungs"><li class="fail"><span class="mk">&times;</span><span>Unknown</span></li><li class="fail"><span class="mk">&times;</span><span>Not Assessed</span></li><li class="fail"><span class="mk">&times;</span><span>Assumed - No Known Competitor</span></li><li class="fail"><span class="mk">&times;</span><span>Competitors Identified</span></li></ul><p class="passline">passes from here</p><ul class="rungs"><li class="pass"><span class="mk">&check;</span><span>Buyer-Confirmed Competitive Set</span></li><li class="pass"><span class="mk">&check;</span><span>Differentiation Confirmed by Buyer</span></li></ul><p class="why">On an Open Tender or Mini-Competition, 'Competitors Identified' is accepted — in a blind tender you cannot confirm the field with the buyer.</p></div></details>
+<div class="callout"><p class="clabel">The pattern behind all of them</p>
+<p>The line always sits at the point where <strong>the buyer told you</strong>, rather than you
+concluding it. That is the whole design: a grade you assigned yourself is not evidence.</p></div>
+
+<h2>Stage by stage, in order</h2>
+
+<h3>1 &middot; Qualify</h3>
 <ul class="stagebar"><li class="on">Qualify</li><li class="">Solution Val.</li><li class="">Proposal / Bid</li><li class="">Negotiation</li><li class="">Closed Won</li><li class="">Closed Lost</li></ul>
-<p>You need <strong>all</strong> of the following. The pattern that runs through the whole model: it is
-not enough to have written something down &mdash; <em>the buyer has to have told you</em>. A rep-assumed
-grade will not pass.</p>
-<div class="tablewrap"><table><thead><tr><th>What</th><th>The bar it has to clear</th></tr></thead><tbody>
-<tr><td>Business Unit, Service Line, Type</td><td>Just set them. Type is <code>New Business</code>, <code>Cross-Sell</code>, <code>Expansion</code> or <code>Renewal</code></td></tr>
-<tr><td><b>Economic Buyer</b></td><td>Named, <em>and</em> graded <code>Engaged - Met or Spoken</code> or <code>Funding Authority Confirmed</code>. <strong>&ldquo;Identified by Name &amp; Role&rdquo; is not enough</strong></td></tr>
-<tr><td><b>Pain / Use Case</b></td><td>Filled, <em>and</em> graded <code>Buyer-Articulated in Own Words</code> or <code>Pain Tied to Business Consequence</code></td></tr>
-<tr><td><b>Success Metric</b></td><td>Filled, <em>and</em> graded <code>Buyer-Stated Impact</code> or <code>Buyer-Quantified &amp; Documented</code></td></tr>
-<tr><td><b>Funding Route</b></td><td>Set, and <strong>not</strong> <code>No Budget Identified</code></td></tr>
-</tbody></table></div>
+<p>You need Business Unit, Service Line and Type set; an <b>Economic Buyer</b> named and graded; a
+<b>Pain / Use Case</b> and <b>Success Metric</b> written and graded; and a <b>Funding Route</b> that is
+not <code>No Budget Identified</code>.</p>
 
-<h2>2 &middot; Leaving Solution Validation &mdash; the longest gate</h2>
+<h3>2 &middot; Solution Validation &mdash; the longest gate</h3>
 <ul class="stagebar"><li class="done">Qualify</li><li class="on">Solution Val.</li><li class="">Proposal / Bid</li><li class="">Negotiation</li><li class="">Closed Won</li><li class="">Closed Lost</li></ul>
-<div class="tablewrap"><table><thead><tr><th>What</th><th>The bar it has to clear</th></tr></thead><tbody>
-<tr><td><b>Procurement Route</b></td><td><code>Direct Award</code>, <code>Framework Call-off</code>, <code>Open Tender</code> or <code>Mini-Competition</code></td></tr>
-<tr><td><b>Framework Name</b></td><td>Required <em>if</em> the route is Framework Call-off or Mini-Competition</td></tr>
-<tr><td><b>Champion</b> + Champion Confirmed Date</td><td>Graded <code>Champion Confirmed Advocacy</code> or better</td></tr>
-<tr><td><b>Decision Criteria</b></td><td>Graded <code>Buyer-Stated, Informal</code> or better</td></tr>
-<tr><td><b>Decision Process</b></td><td>Graded <code>Steps &amp; Timeline Buyer-Confirmed</code> or better</td></tr>
-<tr><td><b>Competition</b></td><td>Graded <code>Buyer-Confirmed Competitive Set</code> or better</td></tr>
-</tbody></table></div>
+<p>Procurement Route, plus <b>Framework Name</b> if it is a call-off or mini-competition. A
+<b>Champion</b> named with a confirmed date and grade. <b>Decision Criteria</b>, <b>Decision
+Process</b> and <b>Competition</b>, each graded.</p>
 <div class="gate pass"><p class="glabel">Two sensible exemptions</p><ul>
 <li>On an <code>Open Tender</code> or <code>Mini-Competition</code>, <code>Competitors Identified</code>
-is accepted &mdash; in a blind tender you genuinely cannot confirm the competitive set with the buyer.</li>
-<li>If <b>Type = Expansion</b> this gate is light-touch: you need only Economic Buyer and Champion set,
+is accepted &mdash; in a blind tender you cannot confirm the competitive set with the buyer.</li>
+<li>If <b>Type = Expansion</b> this gate is light-touch: only Economic Buyer and Champion are needed,
 because an expansion reuses buyer contacts you already have.</li></ul></div>
 
-<h2>3 &middot; Leaving Proposal / Bid Submitted</h2>
+<h3>3 &middot; Proposal / Bid Submitted</h3>
 <ul class="stagebar"><li class="done">Qualify</li><li class="done">Solution Val.</li><li class="on">Proposal / Bid</li><li class="">Negotiation</li><li class="">Closed Won</li><li class="">Closed Lost</li></ul>
-<div class="gate"><p class="glabel">Before you can even enter this stage</p>
-<p>Unless it is a renewal: <b>Bid Decision</b> must be <code>Bid</code> or <code>Bid - Conditional</code>,
-plus <b>Bid Decision Date</b> and <b>Bid Decision By</b>. <code>Pending Review</code> and
-<code>No Bid</code> will block you. Bidding on everything is how margin disappears.</p></div>
-<p>To leave, you need Proposal / Bid Reference; <b>Submission Date</b> &mdash; when you actually
-submitted, not the portal deadline; <b>Buyer Receipt Confirmed</b>, ticked and in writing;
-<b>Evaluation Date</b>; and <b>MEDDPICC Complete</b> &mdash; all eight elements at grade.</p>
-<div class="callout warn"><p class="clabel">Worth knowing</p><p>Paper Process Status is one of the eight
-MEDDPICC elements, so <strong>your commercial paper has to be moving before you can leave
-Proposal</strong>. That is intentional, and it surprises people.</p></div>
+<div class="gate"><p class="glabel">This one gates the way IN, not just the way out</p>
+<p>Unless it is a renewal, <b>Bid Decision</b> must be <code>Bid</code> or
+<code>Bid - Conditional</code>, with a date and a name, <em>before</em> you can enter the stage.
+<code>Pending Review</code> and <code>No Bid</code> will block you. Bidding on everything is how margin
+disappears.</p></div>
+<p>To leave: Proposal / Bid Reference, <b>Submission Date</b> (when you submitted, not the portal
+deadline), <b>Buyer Receipt Confirmed</b> in writing, <b>Evaluation Date</b>, and <b>MEDDPICC
+Complete</b>.</p>
+<div class="callout warn"><p class="clabel">The one that surprises people</p><p>Paper Process Status is
+one of the eight MEDDPICC elements &mdash; so <strong>your commercial paper has to be moving before you
+can leave Proposal</strong>.</p></div>
 
-<h2>4 &middot; Leaving Negotiation / Commercial Agreement</h2>
+<h3>4 &middot; Negotiation / Commercial Agreement</h3>
 <ul class="stagebar"><li class="done">Qualify</li><li class="done">Solution Val.</li><li class="done">Proposal / Bid</li><li class="on">Negotiation</li><li class="">Closed Won</li><li class="">Closed Lost</li></ul>
-<ul>
-<li><b>Verbal Commit Date</b></li>
-<li><b>Verbal Commit Evidence</b> &mdash; written or minuted intent to award</li>
-<li><b>Paper Process Status</b> &mdash; past <code>Not Started</code></li>
-<li><b>Legal Review Status</b> &mdash; past <code>Not Started</code>. <code>Not Required</code> is a
-legitimate answer on existing terms</li></ul>
+<p><b>Verbal Commit Date</b> and <b>Evidence</b> (written or minuted intent to award), <b>Paper Process
+Status</b> past <code>Not Started</code>, and <b>Legal Review Status</b> past <code>Not Started</code>
+&mdash; where <code>Not Required</code> is a legitimate answer on existing terms.</p>
 
-<h2>5 &middot; Closed Won</h2>
+<h3>5 &middot; Closed Won</h3>
 <ul class="stagebar"><li class="done">Qualify</li><li class="done">Solution Val.</li><li class="done">Proposal / Bid</li><li class="done">Negotiation</li><li class="on">Closed Won</li><li class="">Closed Lost</li></ul>
-<p>Contract / PO Number &middot; Signed Date &middot; Contract Start Date &middot; Contract End Date
-&middot; Win Reason.</p>
-<div class="callout warn"><p class="clabel">Two things that bite here</p>
+<p>Contract / PO Number &middot; Signed Date &middot; Contract Start &middot; Contract End &middot;
+Win Reason.</p>
+<div class="callout warn"><p class="clabel">Two things that bite</p>
 <p><strong>Contract End Date drives the automatic renewal.</strong> Get it right.</p>
 <p><strong>Add your products before you close.</strong> A won deal with no line items becomes a finance
-exception, and finance has to come back to you for it.</p></div>
+exception and comes back to you.</p></div>
 
-<h2>6 &middot; Closed Lost</h2>
+<h3>6 &middot; Closed Lost</h3>
 <ul class="stagebar"><li class="done">Qualify</li><li class="done">Solution Val.</li><li class="done">Proposal / Bid</li><li class="done">Negotiation</li><li class="done">Closed Won</li><li class="on">Closed Lost</li></ul>
-<p>Loss Reason &middot; Loss Detail &middot; plus <b>Competitor Won</b> if you lost to a competitor,
-and <b>Winning Supplier &mdash; Other</b> if that competitor is &ldquo;Other&rdquo;.</p>
+<p>Loss Reason &middot; Loss Detail &middot; <b>Competitor Won</b> if you lost to one &middot;
+<b>Winning Supplier &mdash; Other</b> if that competitor is &ldquo;Other&rdquo;.</p>
 <div class="gate"><p class="glabel">One-way door</p><p>A Closed Lost deal <strong>cannot be
-reopened</strong>. If it comes back, use the <b>Create Re-Tender</b> button &mdash; it creates a linked
-new opportunity and preserves the loss history a future win/loss review depends on.</p></div>
+reopened</strong>. If it comes back, use <span class="ui">Create Re-Tender</span> &mdash; it creates a linked new opportunity and keeps the
+loss history a future win/loss review depends on.</p></div>
 
 </div></main>
 <footer><div class="wrap">

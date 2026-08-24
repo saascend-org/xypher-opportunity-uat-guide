@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB"><head>
+<html lang="en-GB" class="no-js"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Renewals &middot; Xypher Deal Desk</title>
 <link rel="icon" href="assets/saascend-favicon.jpg">
@@ -9,52 +9,103 @@
 <link rel="stylesheet" href="assets/site.css">
 </head><body>
 <header class="top"><div class="wrap">
-  <img src="assets/saascend-logo-white.png" alt="SaaScend">
-  <nav class="main"><a href="index.html">Start here</a><a href="create.html">Create a deal</a><a href="stages.html">The six gates</a><a href="renewals.html" aria-current="page">Renewals</a><a href="rebuild.html">Zoho rebuild</a></nav>
+  <a href="index.html"><img src="assets/saascend-logo-white.png" alt="SaaScend"></a><nav class="main"><a href="index.html">Start here</a><a href="create.html">Create a deal</a><a href="stages.html">The six gates</a><a href="examples.html">Worked examples</a><a href="renewals.html" aria-current="page">Renewals</a><a href="rebuild.html">Zoho rebuild</a></nav>
 </div></header>
-<div class="hero"><div class="wrap">
-  <p class="eyebrow">Part three</p>
-  <h1>Auto-renewal</h1>
-  <p class="standfirst">Renewals appear on their own the day a contract enters its window. What arrives, what is deliberately missing, and the one question that needs a decision from the business.</p>
-</div></div>
+<div class="hero"><div class="wrap"><p class="eyebrow">Part four</p><h1>Auto-renewal</h1>
+<p class="standfirst">Renewals appear on their own the day a contract enters its window. What arrives, what is deliberately missing, and the one question that needs a decision from the business.</p></div></div>
 <main><div class="wrap">
 
-<h2>What happens without you doing anything</h2>
-<p>A job runs daily at 06:00. When a won contract enters its renewal window it creates a renewal
-opportunity, posts guidance on it, and marks the original so it is never processed twice.</p>
-<p>The renewal arrives <strong>at Qualify</strong>, owned by you if you owned the original and are
-still active, with contract dates rolled forward and a next step already set.
-<strong>It has no products</strong> &mdash; deliberately. Last year&rsquo;s prices are last
-year&rsquo;s prices.</p>
+<h2>The 90 days, at a glance</h2>
 
-<figure><img src="assets/screenshots/05-renewal-lineage.png" alt="Renewal Lineage. Where the renewal came from, how many renewals deep this contract is, the term rolled forward" loading="lazy"><figcaption><b>Renewal Lineage.</b> Where the renewal came from, how many renewals deep this contract is, the term rolled forward, and who owned the original. <em>Renewed From Opportunity</em> is a link &mdash; click it to open the expiring contract.</figcaption></figure>
+<div class="timeline">
+<svg viewBox="0 0 900 168" role="img"
+     aria-label="Renewal timeline: at 90 days before contract end the renewal is created automatically at Qualify; the next step date is set to 30 days before end; inside the final 30 days that date is in the past and blocks stage changes; at contract end an unrenewed contract has lapsed and appears on a report.">
+  <line x1="60" y1="96" x2="850" y2="96" stroke="var(--rule)" stroke-width="2"/>
+  <rect x="60" y="90" width="527" height="12" fill="var(--pass-soft)"/>
+  <rect x="587" y="90" width="176" height="12" fill="var(--signal-soft)"/>
+  <rect x="763" y="90" width="87" height="12" fill="var(--mono-bg)"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--faint)">
+    <text x="60" y="126" text-anchor="middle">90 days</text>
+    <text x="587" y="126" text-anchor="middle">30 days</text>
+    <text x="763" y="126" text-anchor="middle">contract end</text>
+    <text x="850" y="126" text-anchor="middle">after</text>
+  </g>
+  <g font-family="Archivo, sans-serif" font-size="12.5" font-weight="600" fill="var(--ink)">
+    <text x="60" y="46">Renewal created</text>
+    <text x="587" y="46" text-anchor="middle">Next step goes stale</text>
+    <text x="800" y="46" text-anchor="middle">Lapsed</text>
+  </g>
+  <g font-family="Source Sans 3, sans-serif" font-size="11.5" fill="var(--muted)">
+    <text x="60" y="64">at Qualify, owned by you</text>
+    <text x="587" y="64" text-anchor="middle">you cannot advance until you update it</text>
+    <text x="800" y="64" text-anchor="middle">a person decides</text>
+  </g>
+  <g fill="var(--accent)">
+    <circle cx="60" cy="96" r="6"/><circle cx="587" cy="96" r="6"/>
+  </g>
+  <circle cx="763" cy="96" r="6" fill="var(--signal-edge)"/>
+</svg>
+<div class="tl-key">
+  <span><i style="background:var(--pass-soft);border:1px solid var(--pass)"></i>Next step date still in the future &mdash; first 60 days</span>
+  <span><i style="background:var(--signal-soft);border:1px solid var(--signal-edge)"></i>Next step date has passed &mdash; blocks stage changes</span>
+  <span><i style="background:var(--mono-bg);border:1px solid var(--rule)"></i>Contract over</span>
+</div>
+</div>
+<div class="gate"><p class="glabel">Why the middle band matters</p>
+<p>The renewal arrives with a next-step date set to <strong>30 days before contract end</strong>. That
+stays in the future for the first 60 days. After that it is in the past &mdash; and a past next-step
+date blocks <em>every</em> stage change until you update it. That is deliberate: a renewal untouched
+that late genuinely is overdue. A report catches these before you hit the wall.</p></div>
+
+<h2>What arrives, without you doing anything</h2>
+<p>A job runs daily at 06:00. When a won contract enters its window it creates the renewal, posts
+guidance on it, and marks the original so it is never processed twice.</p>
+<div class="tablewrap"><table><thead><tr><th>On the new renewal</th><th>What you get</th></tr></thead><tbody>
+<tr><td>Stage</td><td><b>Qualify</b> &mdash; deliberately, not Proposal</td></tr>
+<tr><td>Owner</td><td>You, if you owned the original and are still active</td></tr>
+<tr><td>Contract dates</td><td>Rolled forward by the term length</td></tr>
+<tr><td>Amount</td><td>Copied from the expiring deal &mdash; <b>then re-price it</b></td></tr>
+<tr><td>Next Step + date</td><td>Set for you, 30 days before contract end</td></tr>
+<tr><td><b>Products</b></td><td><b>None.</b> Deliberately &mdash; last year&rsquo;s prices are last year&rsquo;s prices</td></tr>
+</tbody></table></div>
+
+<figure><img src="assets/screenshots/05-renewal-lineage.png" alt="Renewal Lineage. Where it came from, how many renewals deep this contract is, the term rolled forward, and who owned the" loading="lazy"><figcaption><b>Renewal Lineage.</b> Where it came from, how many renewals deep this contract is, the term rolled forward, and who owned the original. <em>Renewed From Opportunity</em> is a link &mdash; click it to open the expiring contract.</figcaption></figure>
 
 <h2>Plain renewal versus expansion</h2>
-<p>A plain renewal walks through Qualify and Solution Validation with almost nothing required. Tick
-<b>Renewal Includes Expansion</b> and the full qualification gates apply at every stage. Tick it when
-the scope has genuinely grown; leave it when it has not.</p>
-<div class="tablewrap"><table><thead><tr><th></th><th>Plain renewal</th><th>Renewal + expansion</th></tr></thead><tbody>
-<tr><td>Qualify &rarr; Solution Validation</td><td>Walks through, no data needed</td><td><b>Full MEDDPICC qualification</b></td></tr>
+<p>Tick <b>Renewal Includes Expansion</b> when the scope has genuinely grown. It is the single most
+consequential tick box on the record.</p>
+<div class="tablewrap"><table><thead><tr><th>Moving from</th><th>Plain renewal</th><th>Renewal + expansion</th></tr></thead><tbody>
+<tr><td>Qualify &rarr; Solution Validation</td><td>Walks through</td><td><b>Full MEDDPICC qualification</b></td></tr>
 <tr><td>Solution Validation &rarr; Proposal</td><td>Walks through</td><td>Procurement Route required</td></tr>
 <tr><td>Proposal &rarr; Negotiation</td><td>Walks through</td><td><b>All eight MEDDPICC elements</b></td></tr>
 <tr><td>Negotiation &rarr; Closed Won</td><td>Commercial-close facts</td><td>Same</td></tr>
 </tbody></table></div>
+<p>A plain renewal is about <strong>two clicks</strong> from Qualify to Proposal. An expansion renewal
+is a full new-business qualification with a warm start.</p>
 
 <h2>Generating one yourself</h2>
-<figure><img src="assets/screenshots/07-generate-renewal-action.png" alt="The Generate Renewal button on a won contract. Use it to start early, to retry a renewal that was blocked once" loading="lazy"><figcaption><b>The Generate Renewal button</b> on a won contract. Use it to start early, to retry a renewal that was blocked once ownership is fixed, or when backfilling.</figcaption></figure><figure><img src="assets/screenshots/08-generate-renewal-screen.png" alt="It tells you what it is about to do &mdash; current owner and their business unit, the contract end date, the " loading="lazy"><figcaption><b>It tells you what it is about to do</b> &mdash; current owner and their business unit, the contract end date, the term it will roll to, and whether a renewal already exists. Press it twice and it refuses: it cannot create a duplicate.</figcaption></figure>
+<ol class="clicks"><li><p>Open the won contract you want to renew.</p></li><li><p>Click <span class="ui">Generate Renewal</span> in the action bar. If you cannot see it, open the <span class="ui">▾</span> menu.</p></li><li><p>Read the confirmation screen &mdash; it shows the owner, the contract end date and the term it will roll to.</p></li><li><p>Click <span class="ui">Generate Renewal</span>.</p></li><li><p>You land on a result screen telling you what happened, with a link to the new deal.</p></li><li><p>Press the button a second time to prove it refuses.<span class="said">It cannot create a duplicate. If it ever does, tell us immediately.</span></p></li></ol><figure><img src="assets/screenshots/07-generate-renewal-action.png" alt="The button on a won contract. Use it to start early, to retry a renewal that was blocked once ownership is fixed, or whe" loading="lazy"><figcaption><b>The button</b> on a won contract. Use it to start early, to retry a renewal that was blocked once ownership is fixed, or when backfilling at go-live.</figcaption></figure><figure><img src="assets/screenshots/08-generate-renewal-screen.png" alt="It tells you what it is about to do before it does it &amp;mdash; current owner and their business unit, contract end date, " loading="lazy"><figcaption><b>It tells you what it is about to do</b> before it does it &mdash; current owner and their business unit, contract end date, the term it will roll to, and whether a renewal already exists.</figcaption></figure>
 
 <h2>The guidance it posts for you</h2>
-<figure><img src="assets/screenshots/09-renewal-chatter.png" alt="Chatter on the new renewal. Everything the automation could not do for you: re-confirm the economic buyer, che" loading="lazy"><figcaption><b>Chatter on the new renewal.</b> Everything the automation could not do for you: re-confirm the economic buyer, check whether the scope has outgrown the tier, and add the line items. Worth reading rather than dismissing.</figcaption></figure>
+<figure><img src="assets/screenshots/09-renewal-chatter.png" alt="Chatter on the new renewal. Everything the automation could not do for you: re-confirm the economic buyer, check whether" loading="lazy"><figcaption><b>Chatter on the new renewal.</b> Everything the automation could not do for you: re-confirm the economic buyer, check whether scope has outgrown the tier, add the line items. Worth reading rather than dismissing.</figcaption></figure>
 
 <h2>If the original owner has left</h2>
 <div class="callout warn"><p class="clabel">This one has a financial consequence</p>
 <p>The renewal falls to their manager, then to the account owner. Because <strong>revenue follows the
 owner&rsquo;s business unit</strong>, this can change which entity books the revenue.</p></div>
-<figure><img src="assets/screenshots/06-attribution-shift.png" alt="An attribution shift, on a real record. The original owner left, so the renewal was reassigned. <em>Renewal Ow" loading="lazy"><figcaption><b>An attribution shift, on a real record.</b> The original owner left, so the renewal was reassigned. <em>Renewal Owner Reassigned</em> is ticked and <em>Renewal Original Owner BU</em> still reads <code>Intaforensics</code> &mdash; a frozen snapshot &mdash; while the current owner books to <code>Xypher</code>. Finance can see exactly what moved.</figcaption></figure>
+<figure><img src="assets/screenshots/06-attribution-shift.png" alt="An attribution shift, on a real record. The original owner left, so the renewal was reassigned. Renewal Owner Reassigned" loading="lazy"><figcaption><b>An attribution shift, on a real record.</b> The original owner left, so the renewal was reassigned. <em>Renewal Owner Reassigned</em> is ticked and <em>Renewal Original Owner BU</em> still reads <code>Intaforensics</code> &mdash; a frozen snapshot &mdash; while the current owner books to <code>Xypher</code>. Finance can see exactly what moved.</figcaption></figure>
 <div class="gate"><p class="glabel">The question we need answered</p>
 <p><strong>Is that the behaviour you want?</strong> The alternative is that the renewal stays with the
 original business unit and someone there picks it up. We have built the first option and it is
 reversible &mdash; but this is a business decision, not a technical one.</p></div>
+
+<h2>Things you will see and should not worry about</h2>
+<div class="tablewrap"><table><thead><tr><th>What you see</th><th>Why</th></tr></thead><tbody>
+<tr><td>A renewal with no products</td><td>By design. Add and re-price them</td></tr>
+<tr><td>A won contract that lapsed with no renewal</td><td>Automation will not renew a dead contract &mdash; a person decides. It shows on a report for exactly that</td></tr>
+<tr><td>Finance mostly showing &ldquo;Awaiting BC Customer&rdquo;</td><td>Business Central is not connected yet. Finance reads the records by hand for now</td></tr>
+<tr><td>No email about any of it</td><td>Sandboxes do not send email. Guidance is in Chatter on the record</td></tr>
+</tbody></table></div>
 
 </div></main>
 <footer><div class="wrap">
