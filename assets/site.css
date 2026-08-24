@@ -21,6 +21,11 @@
   --signal:#E0AC5A;--signal-soft:#2A2113;--signal-edge:#B5842F;
   --pass:#7FBE97;--pass-soft:#16261D;--mono-bg:#202B36;
 }
+/* The [hidden] attribute only sets display:none at very low specificity, so ANY explicit
+   display rule silently beats it — .reqs{display:flex} did exactly that, and every stage's
+   requirements rendered at once while the attribute read as hidden. Enforce it globally.
+   Diagnosed visually on 2026-08-24: a JS assertion on el.hidden passed the whole time. */
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-body);
   font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
