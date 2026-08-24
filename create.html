@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-GB"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create a deal &middot; Xypher Deal Desk</title>
+<link rel="icon" href="assets/saascend-favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <img src="assets/saascend-logo-white.png" alt="SaaScend">
+  <nav class="main"><a href="index.html">Start here</a><a href="create.html" aria-current="page">Create a deal</a><a href="stages.html">The six gates</a><a href="renewals.html">Renewals</a><a href="rebuild.html">Zoho rebuild</a></nav>
+</div></header>
+<div class="hero"><div class="wrap">
+  <p class="eyebrow">Part one</p>
+  <h1>Creating a deal</h1>
+  <p class="standfirst">What Salesforce genuinely requires, why you should enter a deal at its real stage, and how contact roles look after themselves.</p>
+</div></div>
+<main><div class="wrap">
+
+<h2>What you actually need to save a new deal</h2>
+<p>Very little. Salesforce itself only insists on four things:</p>
+<div class="tablewrap"><table><thead><tr><th>Field</th><th>What to put</th></tr></thead><tbody>
+<tr><td><b>Opportunity Name</b></td><td>A real convention &mdash; <code>Customer - Service - Year</code>. Consistency matters more than the exact format</td></tr>
+<tr><td><b>Close Date</b></td><td>Your genuine expected decision date. Not a comfortable one</td></tr>
+<tr><td><b>Stage</b></td><td>Where the deal really is today. See below &mdash; this is the important one</td></tr>
+<tr><td><b>Account</b></td><td>The customer. Create the Account first if it is not already there</td></tr>
+</tbody></table></div>
+<p>Everything else can wait. <strong>The gates fire when you move stages, not when you save.</strong></p>
+
+<h2>Create the deal at the stage it is genuinely at</h2>
+<p>This is the most useful thing on this site, and it is what makes rebuilding a pipeline by hand
+realistic rather than miserable.</p>
+<p>Of the twelve rules governing opportunities, <strong>eight only fire when the stage changes</strong>.
+They do not fire when a record is created. A deal created directly at <em>Proposal / Bid Submitted</em>
+does not have to satisfy the Qualify or Solution Validation exit criteria first.</p>
+<div class="callout"><p class="clabel">The point</p><p>You do not have to fake history. Put the deal in
+at its real stage, with what you actually know.</p></div>
+<p>Two exceptions, because they check the stage itself rather than a change to it:</p>
+<ul>
+<li><strong>Closed Won</strong> needs Contract/PO Number, Signed Date, Contract Start, Contract End and Win Reason &mdash; even on creation.</li>
+<li><strong>Closed Lost</strong> needs Loss Reason and Loss Detail &mdash; even on creation.</li>
+</ul>
+
+<h2>The catch, so it does not surprise you</h2>
+<p>Creating at a late stage is free. <strong>Moving on from it is not.</strong> The exit gate for
+whatever stage you land on applies the moment you try to advance. A deal entered at Proposal will,
+when you next move it, need the full Proposal exit set &mdash; including all eight MEDDPICC elements.
+Enter it where it really is, and you will be asked for exactly the information you should already have.</p>
+
+<figure><img src="assets/screenshots/02-record-page-sections.png" alt="The record page. Fields are grouped into sections &mdash; Deal Classification, Qualification and MEDDPICC, Com" loading="lazy"><figcaption><b>The record page.</b> Fields are grouped into sections &mdash; Deal Classification, Qualification and MEDDPICC, Commercial &amp; Contract, and so on. The Sales Path across the top always shows the stage you are on and what it needs.</figcaption></figure>
+<h2>Contact roles &mdash; you do not maintain these by hand</h2>
+<p>Set the <b>Economic Buyer</b> and <b>Champion</b> lookup fields and the contact roles are created
+for you. Change either lookup and the existing role is <em>repointed</em> rather than duplicated, so
+you end up with one role, not two.</p>
+<figure><img src="assets/screenshots/03b-contact-roles.png" alt="Contact Roles, created automatically. Two roles here &mdash; an Economic Buyer and a Champion &mdash; both gen" loading="lazy"><figcaption><b>Contact Roles, created automatically.</b> Two roles here &mdash; an Economic Buyer and a Champion &mdash; both generated from the lookup fields on the deal. The panel on the right is the Sales Path guidance for Qualify, listing that stage&rsquo;s exit criteria.</figcaption></figure>
+<p>Roles available if you add others by hand: Business User, Decision Maker, Economic Buyer, Champion,
+Economic Decision Maker, Evaluator, Executive Sponsor, Influencer, Technical Buyer, Other.</p>
+<div class="gate pass"><p class="glabel">Worth testing</p><p>Set an Economic Buyer, save, and check the
+Contact Roles list. Then change it to a different contact and confirm you still have exactly one
+Economic Buyer role, now pointing at the new person.</p></div>
+
+</div></main>
+<footer><div class="wrap">
+  Xypher Deal Desk &middot; sandbox UAT guide &middot; every rule here was read from
+  <code>xypher--saascendfc</code> and exercised as an ordinary sales user.<br>
+  Screenshots use <code>[DEMO]</code> records only &mdash; no real customer data. Prepared by SaaScend.
+</div></footer>
+<div id="lb" tabindex="-1" aria-hidden="true"><img alt=""></div>
+<script src="assets/site.js"></script>
+</body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Start here &middot; Xypher Deal Desk</title>
+<link rel="icon" href="assets/saascend-favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <img src="assets/saascend-logo-white.png" alt="SaaScend">
+  <nav class="main"><a href="index.html" aria-current="page">Start here</a><a href="create.html">Create a deal</a><a href="stages.html">The six gates</a><a href="renewals.html">Renewals</a><a href="rebuild.html">Zoho rebuild</a></nav>
+</div></header>
+<div class="hero"><div class="wrap">
+  <p class="eyebrow">Xypher &middot; Salesforce UAT</p>
+  <h1>Xypher Deal Desk</h1>
+  <p class="standfirst">How to create an opportunity, what each stage will demand of you before it lets you move on, how renewals appear on their own &mdash; and how to rebuild your open Zoho pipeline without inventing history you never had.</p>
+</div></div>
+<main><div class="wrap">
+
+<div class="callout verified"><p class="clabel">Read this bit first</p>
+<p>Every rule on this site was read from the live sandbox and exercised as a <strong>normal sales
+user</strong> &mdash; not a system administrator, who bypasses all of it. Where the guide says
+something will stop you, it will. Screenshots are all from <code>[DEMO]</code> records, so nothing
+here is a real customer.</p></div>
+
+<h2>Where to go</h2>
+<div class="cards">
+  <a href="create.html"><span class="n">01</span><h3>Creating a deal</h3>
+    <p>The four fields you actually need &mdash; and why you should enter a deal at the stage it is
+    really at.</p></a>
+  <a href="stages.html"><span class="n">02</span><h3>The six gates</h3>
+    <p>Exactly what each stage demands before it lets you move on, with the grade thresholds.</p></a>
+  <a href="renewals.html"><span class="n">03</span><h3>Auto-renewal</h3>
+    <p>Renewals appear on their own. What arrives, what is deliberately missing, and the one
+    question that needs a business decision.</p></a>
+  <a href="rebuild.html"><span class="n">04</span><h3>Rebuilding your pipeline</h3>
+    <p>Re-entering your open Zoho deals by hand, in the right order, without inventing history.</p></a>
+</div>
+
+<h2>The sandbox</h2>
+<p><a href="https://xypher--saascendfc.sandbox.my.salesforce.com">xypher--saascendfc.sandbox.my.salesforce.com</a></p>
+<div class="gate"><p class="glabel">If you can skip a stage, stop</p>
+<p>You should not be able to move a deal without filling anything in. If you can, your login has an
+override it should not have &mdash; tell us, because nothing you test after that proves anything.</p></div>
+<p>Two other things about the sandbox: <strong>no emails are sent</strong>, so all system guidance
+appears as Chatter posts on the record; and it holds real customer data, so treat it as live.</p>
+
+<h2>What we want back</h2>
+<ol>
+  <li><strong>Are the gates set at the right height?</strong> Too strict is as bad as too loose.</li>
+  <li><strong>Is a plain renewal too easy to push through?</strong> It is meant to be light. Is it too light?</li>
+  <li><strong>The ownership question</strong> on the <a href="renewals.html">renewals page</a> &mdash;
+      that one changes which entity books revenue.</li>
+  <li><strong>Anything you expected to find and could not.</strong></li>
+</ol>
+<p>Post feedback in Chatter <strong>on the record it concerns</strong>, so we see it in context.
+Anything broader, send it to Tej.</p>
+
+<h2>Known and expected &mdash; not bugs</h2>
+<div class="tablewrap"><table><thead><tr><th>You will see</th><th>Why</th></tr></thead><tbody>
+<tr><td>Renewals arrive with no products</td><td>Deliberate. Last year&rsquo;s prices are last year&rsquo;s prices</td></tr>
+<tr><td>Finance shows mostly &ldquo;Awaiting BC Customer&rdquo;</td><td>Business Central is not connected yet. Finance reads the records by hand for now</td></tr>
+<tr><td>A lapsed contract with no renewal</td><td>Automation will not renew a dead contract &mdash; a person decides. It shows on a report for exactly that</td></tr>
+<tr><td>No emails arrive</td><td>Sandboxes do not send email. All guidance is in Chatter on the record</td></tr>
+</tbody></table></div>
+
+</div></main>
+<footer><div class="wrap">
+  Xypher Deal Desk &middot; sandbox UAT guide &middot; every rule here was read from
+  <code>xypher--saascendfc</code> and exercised as an ordinary sales user.<br>
+  Screenshots use <code>[DEMO]</code> records only &mdash; no real customer data. Prepared by SaaScend.
+</div></footer>
+<div id="lb" tabindex="-1" aria-hidden="true"><img alt=""></div>
+<script src="assets/site.js"></script>
+</body></html>

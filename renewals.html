@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Renewals &middot; Xypher Deal Desk</title>
+<link rel="icon" href="assets/saascend-favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head><body>
+<header class="top"><div class="wrap">
+  <img src="assets/saascend-logo-white.png" alt="SaaScend">
+  <nav class="main"><a href="index.html">Start here</a><a href="create.html">Create a deal</a><a href="stages.html">The six gates</a><a href="renewals.html" aria-current="page">Renewals</a><a href="rebuild.html">Zoho rebuild</a></nav>
+</div></header>
+<div class="hero"><div class="wrap">
+  <p class="eyebrow">Part three</p>
+  <h1>Auto-renewal</h1>
+  <p class="standfirst">Renewals appear on their own the day a contract enters its window. What arrives, what is deliberately missing, and the one question that needs a decision from the business.</p>
+</div></div>
+<main><div class="wrap">
+
+<h2>What happens without you doing anything</h2>
+<p>A job runs daily at 06:00. When a won contract enters its renewal window it creates a renewal
+opportunity, posts guidance on it, and marks the original so it is never processed twice.</p>
+<p>The renewal arrives <strong>at Qualify</strong>, owned by you if you owned the original and are
+still active, with contract dates rolled forward and a next step already set.
+<strong>It has no products</strong> &mdash; deliberately. Last year&rsquo;s prices are last
+year&rsquo;s prices.</p>
+
+<figure><img src="assets/screenshots/05-renewal-lineage.png" alt="Renewal Lineage. Where the renewal came from, how many renewals deep this contract is, the term rolled forward" loading="lazy"><figcaption><b>Renewal Lineage.</b> Where the renewal came from, how many renewals deep this contract is, the term rolled forward, and who owned the original. <em>Renewed From Opportunity</em> is a link &mdash; click it to open the expiring contract.</figcaption></figure>
+
+<h2>Plain renewal versus expansion</h2>
+<p>A plain renewal walks through Qualify and Solution Validation with almost nothing required. Tick
+<b>Renewal Includes Expansion</b> and the full qualification gates apply at every stage. Tick it when
+the scope has genuinely grown; leave it when it has not.</p>
+<div class="tablewrap"><table><thead><tr><th></th><th>Plain renewal</th><th>Renewal + expansion</th></tr></thead><tbody>
+<tr><td>Qualify &rarr; Solution Validation</td><td>Walks through, no data needed</td><td><b>Full MEDDPICC qualification</b></td></tr>
+<tr><td>Solution Validation &rarr; Proposal</td><td>Walks through</td><td>Procurement Route required</td></tr>
+<tr><td>Proposal &rarr; Negotiation</td><td>Walks through</td><td><b>All eight MEDDPICC elements</b></td></tr>
+<tr><td>Negotiation &rarr; Closed Won</td><td>Commercial-close facts</td><td>Same</td></tr>
+</tbody></table></div>
+
+<h2>Generating one yourself</h2>
+<figure><img src="assets/screenshots/07-generate-renewal-action.png" alt="The Generate Renewal button on a won contract. Use it to start early, to retry a renewal that was blocked once" loading="lazy"><figcaption><b>The Generate Renewal button</b> on a won contract. Use it to start early, to retry a renewal that was blocked once ownership is fixed, or when backfilling.</figcaption></figure><figure><img src="assets/screenshots/08-generate-renewal-screen.png" alt="It tells you what it is about to do &mdash; current owner and their business unit, the contract end date, the " loading="lazy"><figcaption><b>It tells you what it is about to do</b> &mdash; current owner and their business unit, the contract end date, the term it will roll to, and whether a renewal already exists. Press it twice and it refuses: it cannot create a duplicate.</figcaption></figure>
+
+<h2>The guidance it posts for you</h2>
+<figure><img src="assets/screenshots/09-renewal-chatter.png" alt="Chatter on the new renewal. Everything the automation could not do for you: re-confirm the economic buyer, che" loading="lazy"><figcaption><b>Chatter on the new renewal.</b> Everything the automation could not do for you: re-confirm the economic buyer, check whether the scope has outgrown the tier, and add the line items. Worth reading rather than dismissing.</figcaption></figure>
+
+<h2>If the original owner has left</h2>
+<div class="callout warn"><p class="clabel">This one has a financial consequence</p>
+<p>The renewal falls to their manager, then to the account owner. Because <strong>revenue follows the
+owner&rsquo;s business unit</strong>, this can change which entity books the revenue.</p></div>
+<figure><img src="assets/screenshots/06-attribution-shift.png" alt="An attribution shift, on a real record. The original owner left, so the renewal was reassigned. <em>Renewal Ow" loading="lazy"><figcaption><b>An attribution shift, on a real record.</b> The original owner left, so the renewal was reassigned. <em>Renewal Owner Reassigned</em> is ticked and <em>Renewal Original Owner BU</em> still reads <code>Intaforensics</code> &mdash; a frozen snapshot &mdash; while the current owner books to <code>Xypher</code>. Finance can see exactly what moved.</figcaption></figure>
+<div class="gate"><p class="glabel">The question we need answered</p>
+<p><strong>Is that the behaviour you want?</strong> The alternative is that the renewal stays with the
+original business unit and someone there picks it up. We have built the first option and it is
+reversible &mdash; but this is a business decision, not a technical one.</p></div>
+
+</div></main>
+<footer><div class="wrap">
+  Xypher Deal Desk &middot; sandbox UAT guide &middot; every rule here was read from
+  <code>xypher--saascendfc</code> and exercised as an ordinary sales user.<br>
+  Screenshots use <code>[DEMO]</code> records only &mdash; no real customer data. Prepared by SaaScend.
+</div></footer>
+<div id="lb" tabindex="-1" aria-hidden="true"><img alt=""></div>
+<script src="assets/site.js"></script>
+</body></html>
